@@ -1,18 +1,44 @@
-# Sphinx > GitHub Actions > Pages
+# 📚 Sphinx Documentation Site
 
-![example workflow](https://github.com/RGGH/ghp2/actions/workflows/sphinx.yml/badge.svg)
+This repository contains a documentation site powered by [Sphinx](https://www.sphinx-doc.org/) and deployed to **GitHub Pages**. It supports local preview and automated deployment via GitHub Actions.
 
-### [jubilantlamp](https://rggh.github.io/jubilant-lamp/)
+This is just for my sphinx learning purpose.
 
-- click settings to enable github pages : https://docs.github.com/en/pages/quickstart
-- add workflow permissions : https://github.com/ad-m/github-push-action/issues/96#issuecomment-889984928
-- to use this as a base, use : git remote remove origin so you can start a new repo<br>
-  eg : git remote add origin https://github.com/RGGH/the-new-repo-name.git
-- The workflow action uses `pip install ghp-import`
-- The yaml file uses 'master' not main
-- [Full Article and Tutorial on the redandgreen website](https://redandgreen.co.uk/sphinx-to-github-pages-via-github-actions/)
+---
 
-[buymeacoffee](https://www.buymeacoffee.com/DrPi)
+## 📦 Requirements
+
+Make sure you have Python and pip installed. Then install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Also install ghp-import (used for deployment):
+```bash
+pip install ghp-import
+```
+
+## Building the Docs
+To build the HTML documentation locally:
+
+```bash
+cd docs
+make html
+```
+
+The output will be generated inside:
+```bash
+docs/_build/html
+```
+
+## Preview Locally
+To view the site in your browser before deploying:
+
+```bash
+cd docs/_build/html
+open index.html
+```
 
 
 
